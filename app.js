@@ -84,6 +84,11 @@ app.post("/post", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Express is listening on localhost:${port}`);
-});
+// 部署到 Vercel 則不需要
+//const port = 3000;
+// app.listen(port, () => {
+//   console.log(`Server running at http://localhost:${port}`);
+// });
+
+// 部署到 Vercel 需要增加這一行
+export default app;
